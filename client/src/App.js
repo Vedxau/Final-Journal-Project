@@ -10,7 +10,8 @@ import TradeLog from './pages/TradeLog';
 import Calendar from './pages/Calendar';
 import News from './pages/News';
 import Analytics from './pages/Analytics';
-import LandingPage from './pages/LandingPage';
+// Removed import of LandingPage to remove landing page
+// import LandingPage from './pages/LandingPage';
 
 const ProtectedRoute = ({ children }) => {
   const { user, loading } = useAuth();
@@ -53,8 +54,10 @@ function AppRoutes() {
           <Register />
         </PublicRoute>
       } />
-      <Route path="/" element={<Navigate to="/landing" />} />
-      <Route path="/landing" element={<LandingPage />} />
+      {/* Redirect root path to login page instead of landing */}
+      <Route path="/" element={<Navigate to="/login" />} />
+      {/* Removed landing page route */}
+      {/* <Route path="/landing" element={<LandingPage />} /> */}
       <Route path="/dashboard" element={
         <ProtectedRoute>
           <Layout />
