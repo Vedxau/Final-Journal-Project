@@ -35,6 +35,7 @@
     "url": "https://github.com/vedxau/Final-Journal-Project.git"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^5.1.0",
     "mongoose": "^8.17.1"
   }
