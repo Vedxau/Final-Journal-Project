@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Edit, Save, DollarSign, Calendar, Target, TrendingUp, TrendingDown, Image } from 'lucide-react';
+import { X, Edit, Save, DollarSign, Calendar, Target, TrendingUp, TrendingDown, Image } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import toast from 'react-hot-toast';
