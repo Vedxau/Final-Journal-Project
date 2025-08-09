@@ -28,7 +28,7 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 to-primary-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-400 to-cyan-500 py-12 px-4 sm:px-6 lg:px-8">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -50,7 +50,7 @@ const Login = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
-            className="text-3xl font-bold text-gray-900 mb-2"
+            className="text-3xl font-bold text-white mb-2"
           >
             Welcome back
           </motion.h2>
@@ -59,7 +59,7 @@ const Login = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
-            className="text-gray-600"
+            className="text-cyan-100"
           >
             Sign in to your trading journal
           </motion.p>
@@ -83,7 +83,7 @@ const Login = () => {
                 id="email"
                 type="email"
                 autoComplete="email"
-                className={`input ${errors.email ? 'border-danger-500 focus:border-danger-500 focus:ring-danger-500' : ''}`}
+                className={`input bg-white border border-gray-300 rounded-md shadow-sm focus:ring-cyan-400 focus:border-cyan-400 ${errors.email ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : ''}`}
                 placeholder="Enter your email"
                 {...register('email', {
                   required: 'Email is required',
@@ -108,7 +108,7 @@ const Login = () => {
                   id="password"
                   type={showPassword ? 'text' : 'password'}
                   autoComplete="current-password"
-                  className={`input pr-10 ${errors.password ? 'border-danger-500 focus:border-danger-500 focus:ring-danger-500' : ''}`}
+                className={`input bg-white border border-gray-300 rounded-md shadow-sm focus:ring-cyan-400 focus:border-cyan-400 pr-10 ${errors.password ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : ''}`}
                   placeholder="Enter your password"
                   {...register('password', {
                     required: 'Password is required',
@@ -159,7 +159,7 @@ const Login = () => {
 
           {/* Register Link */}
           <div className="text-center">
-            <p className="text-sm text-gray-600">
+            <p className="text-sm text-cyan-100">
               Don't have an account?{' '}
               <Link
                 to="/register"

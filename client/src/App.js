@@ -10,6 +10,7 @@ import TradeLog from './pages/TradeLog';
 import Calendar from './pages/Calendar';
 import News from './pages/News';
 import Analytics from './pages/Analytics';
+import LandingPage from './pages/LandingPage';
 
 const ProtectedRoute = ({ children }) => {
   const { user, loading } = useAuth();
@@ -52,7 +53,8 @@ function AppRoutes() {
           <Register />
         </PublicRoute>
       } />
-      <Route path="/" element={<Navigate to="/dashboard" />} />
+      <Route path="/" element={<Navigate to="/landing" />} />
+      <Route path="/landing" element={<LandingPage />} />
       <Route path="/dashboard" element={
         <ProtectedRoute>
           <Layout />

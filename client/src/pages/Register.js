@@ -32,12 +32,12 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 to-primary-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-400 to-cyan-500 py-12 px-4 sm:px-6 lg:px-8">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="max-w-md w-full space-y-8"
+        className="max-w-md w-full space-y-8 text-left"
       >
         {/* Header */}
         <div className="text-center">
@@ -54,7 +54,7 @@ const Register = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
-            className="text-3xl font-bold text-gray-900 mb-2"
+            className="text-3xl font-bold text-white mb-2"
           >
             Create account
           </motion.h2>
@@ -63,7 +63,7 @@ const Register = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
-            className="text-gray-600"
+            className="text-cyan-100"
           >
             Start your trading journal journey
           </motion.p>
@@ -86,7 +86,7 @@ const Register = () => {
               <input
                 id="nickname"
                 type="text"
-                className={`input ${errors.nickname ? 'border-danger-500 focus:border-danger-500 focus:ring-danger-500' : ''}`}
+                className={`input bg-white border border-gray-300 rounded-md shadow-sm focus:ring-cyan-400 focus:border-cyan-400 ${errors.nickname ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : ''}`}
                 placeholder="Enter a nickname"
                 {...register('nickname', {
                   required: 'Nickname is required',
@@ -115,7 +115,7 @@ const Register = () => {
                   id="username"
                   type="text"
                   autoComplete="username"
-                  className={`input pl-10 ${errors.username ? 'border-danger-500 focus:border-danger-500 focus:ring-danger-500' : ''}`}
+                className={`input bg-white border border-gray-300 rounded-md shadow-sm focus:ring-cyan-400 focus:border-cyan-400 pl-10 ${errors.username ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : ''}`}
                   placeholder="Choose a username"
                   {...register('username', {
                     required: 'Username is required',
@@ -145,7 +145,7 @@ const Register = () => {
                 id="firstName"
                 type="text"
                 autoComplete="given-name"
-                className={`input ${errors.firstName ? 'border-danger-500 focus:border-danger-500 focus:ring-danger-500' : ''}`}
+                className={`input bg-white border border-gray-300 rounded-md shadow-sm focus:ring-cyan-400 focus:border-cyan-400 ${errors.firstName ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : ''}`}
                 placeholder="Enter your first name"
                 {...register('firstName', {
                   required: 'First name is required',
@@ -169,7 +169,7 @@ const Register = () => {
                 id="lastName"
                 type="text"
                 autoComplete="family-name"
-                className={`input ${errors.lastName ? 'border-danger-500 focus:border-danger-500 focus:ring-danger-500' : ''}`}
+                className={`input bg-white border border-gray-300 rounded-md shadow-sm focus:ring-cyan-400 focus:border-cyan-400 ${errors.lastName ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : ''}`}
                 placeholder="Enter your last name"
                 {...register('lastName', {
                   required: 'Last name is required',
@@ -194,7 +194,7 @@ const Register = () => {
                   id="email"
                   type="email"
                   autoComplete="email"
-                  className={`input pl-10 ${errors.email ? 'border-danger-500 focus:border-danger-500 focus:ring-danger-500' : ''}`}
+                className={`input bg-white border border-gray-300 rounded-md shadow-sm focus:ring-cyan-400 focus:border-cyan-400 pl-10 ${errors.email ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : ''}`}
                   placeholder="Enter your email"
                   {...register('email', {
                     required: 'Email is required',
@@ -221,7 +221,7 @@ const Register = () => {
                   id="password"
                   type={showPassword ? 'text' : 'password'}
                   autoComplete="new-password"
-                  className={`input pl-10 pr-10 ${errors.password ? 'border-danger-500 focus:border-danger-500 focus:ring-danger-500' : ''}`}
+                className={`input bg-white border border-gray-300 rounded-md shadow-sm focus:ring-cyan-400 focus:border-cyan-400 pl-10 pr-10 ${errors.password ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : ''}`}
                   placeholder="Create a password"
                   {...register('password', {
                     required: 'Password is required',
@@ -259,7 +259,7 @@ const Register = () => {
                   id="confirmPassword"
                   type={showConfirmPassword ? 'text' : 'password'}
                   autoComplete="new-password"
-                  className={`input pl-10 pr-10 ${errors.confirmPassword ? 'border-danger-500 focus:border-danger-500 focus:ring-danger-500' : ''}`}
+                className={`input bg-white border border-gray-300 rounded-md shadow-sm focus:ring-cyan-400 focus:border-cyan-400 pl-10 pr-10 ${errors.confirmPassword ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : ''}`}
                   placeholder="Confirm your password"
                   {...register('confirmPassword', {
                     required: 'Please confirm your password',
@@ -308,7 +308,7 @@ const Register = () => {
 
           {/* Login Link */}
           <div className="text-center">
-            <p className="text-sm text-gray-600">
+            <p className="text-sm text-cyan-100">
               Already have an account?{' '}
               <Link
                 to="/login"
