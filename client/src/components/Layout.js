@@ -8,10 +8,8 @@ import {
   Newspaper, 
   BarChart3, 
   Menu, 
-  X, 
   LogOut, 
   User, 
-  Settings,
   ArrowLeft
 } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
@@ -108,9 +106,9 @@ const Layout = () => {
             <h1 className="text-xl font-bold text-gray-900">Trading Journal</h1>
           </div>
           <nav className="flex flex-1 flex-col">
-            <ul role="list" className="flex flex-1 flex-col gap-y-7">
+            <ul className="flex flex-1 flex-col gap-y-7">
               <li>
-                <ul role="list" className="-mx-2 space-y-1">
+                <ul className="-mx-2 space-y-1">
                   {navigation.map((item) => {
                     const isActive = location.pathname === item.href;
                     return (

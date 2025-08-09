@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Edit, Save, DollarSign, Calendar, Target, TrendingUp, TrendingDown, Image } from 'lucide-react';
+import { Edit, Save, DollarSign, Calendar, Target, TrendingUp, TrendingDown, Image } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import toast from 'react-hot-toast';
@@ -337,7 +337,7 @@ const TradeModal = ({ trade, onClose, onUpdate }) => {
                       <div key={index} className="relative group">
                         <img
                           src={image.path}
-                          alt={`Trade image ${index + 1}`}
+                          alt={`Trade ${index + 1}`}
                           className="w-full h-32 object-cover rounded-lg border border-gray-200"
                         />
                         <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-200 rounded-lg flex items-center justify-center">
